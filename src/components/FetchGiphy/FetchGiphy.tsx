@@ -21,10 +21,9 @@ export const FetchGiphy = (selectedText: string, weirdnessValue: number) => {
       setIsLoading(true);
 
       try {
-        // I choose axios because it's one less step to parse to JSON
-        // and it felt more simple. For rapid development, simplicity is key.
-        const result = await axios(url);
-        setData(result.data.data.images.fixed_height);
+        fetch(url).then(resp => resp.json()).then((result) => {
+          setData(result.data.images.fixed_height)
+        })
       } catch (error) {
         setIsError(true);
       }

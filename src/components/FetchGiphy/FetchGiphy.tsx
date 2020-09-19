@@ -5,7 +5,7 @@ const axios = require("axios");
 // Woulld have liked to stor this as a secret keys
 const API_KEY = "4Z15yuylYr1bEQkpJiBb3dd4ffvUfs5v";
 // To prevent Mixed Content issue, I removed the htto
-const API_URL = "//api.giphy.com/v1/gifs/translate?s=";
+const API_URL = "https://api.giphy.com/v1/gifs/translate?s=";
 
 export const FetchGiphy = (selectedText: string, weirdnessValue: number) => {
   const [data, setData] = useState({ url: "", height: 0, width: 0 });

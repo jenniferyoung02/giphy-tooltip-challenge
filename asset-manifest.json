@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/giphy-tooltip-challenge/static/css/main.df93cc5a.chunk.css",
+    "main.js": "/giphy-tooltip-challenge/static/js/main.0f9be14e.chunk.js",
+    "main.js.map": "/giphy-tooltip-challenge/static/js/main.0f9be14e.chunk.js.map",
+    "runtime-main.js": "/giphy-tooltip-challenge/static/js/runtime-main.8d1f99f7.js",
+    "runtime-main.js.map": "/giphy-tooltip-challenge/static/js/runtime-main.8d1f99f7.js.map",
+    "static/css/2.8aa5a7f8.chunk.css": "/giphy-tooltip-challenge/static/css/2.8aa5a7f8.chunk.css",
+    "static/js/2.f9b16980.chunk.js": "/giphy-tooltip-challenge/static/js/2.f9b16980.chunk.js",
+    "static/js/2.f9b16980.chunk.js.map": "/giphy-tooltip-challenge/static/js/2.f9b16980.chunk.js.map",
+    "index.html": "/giphy-tooltip-challenge/index.html",
+    "precache-manifest.0f77dfb36fb61da8963fd81a386b9e90.js": "/giphy-tooltip-challenge/precache-manifest.0f77dfb36fb61da8963fd81a386b9e90.js",
+    "service-worker.js": "/giphy-tooltip-challenge/service-worker.js",
+    "static/css/2.8aa5a7f8.chunk.css.map": "/giphy-tooltip-challenge/static/css/2.8aa5a7f8.chunk.css.map",
+    "static/css/main.df93cc5a.chunk.css.map": "/giphy-tooltip-challenge/static/css/main.df93cc5a.chunk.css.map",
+    "static/js/2.f9b16980.chunk.js.LICENSE.txt": "/giphy-tooltip-challenge/static/js/2.f9b16980.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d1f99f7.js",
+    "static/css/2.8aa5a7f8.chunk.css",
+    "static/js/2.f9b16980.chunk.js",
+    "static/css/main.df93cc5a.chunk.css",
+    "static/js/main.0f9be14e.chunk.js"
+  ]
+}

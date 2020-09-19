@@ -12,7 +12,7 @@ You should see the GIPHY Tooltip at `localhost:3000`
 # My Thought Process
 
 ## Mixed Content: The page was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint. This request has been blocked.
-Uh oh! When I first started with codesandbox, I wanted to see how that environment interacted with axios and fetching from an API. I'm sure glad that was one of the first things I did, because I got was the error 
+Uh oh! When I first started with code sandbox, I wanted to see how that environment interacted with axios and fetching from an API. I'm sure glad that was one of the first things I did, because I got was the error 
 
 <code>Mixed Content: The page was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint'. This request has been blocked; the content must be served over HTTPS.</code>
 
@@ -24,7 +24,7 @@ Towards the end of the time, when I finally deployed to Github - I had the same 
 
 My first puzzle to figure out was how to know the position of the highlighted code so that the tooltip could hover over the appropriate part. At first, I was thinking about wrapping each word in a div with a unique ID and then passing that ID to the tooltip. But I thought that was overpopulating the virtual DOM and didn't feel necessary. I quickly did some research and found that I can use window.getSelection() and e.target.clientX/clientY to get the selected text and furthermore get the coordinates of the selected text.
 
-Originally I tried using clientX but realized that whether I starting highlight from the left or right would really effect the clientX value (because my mouseup would be at different points). I also noticed by only using / clientY, the tooltip was hovering only above the place of mouseUp. I found a method on stack overflow to get specific coordinates of the seleted text, including the left, top and width. I used the coordiantes of the selected text to figure out where the X axis (or the left css property) should be of the tooltip. I used the left + width / 2 to get the x axis of the tooltip, centering around the selected text. I used the coordiantes of top, plus a buffer to determine how far above the tooltip should over.
+Originally I tried using clientX but realized that whether I starting highlight from the left or right would really effect the clientX value (because my mouseup would be at different points). I also noticed by only using / clientY, the tooltip was hovering only above the place of mouseUp. I found a method on stack overflow to get specific coordinates of the seleted text, including the left, top and width. I used the coordinates of the selected text to figure out where the X axis (or the left css property) should be of the tooltip. I used the left + width / 2 to get the x axis of the tooltip, centering around the selected text. I used the coordinates of top, plus a buffer to determine how far above the tooltip should over.
 
 ## Edge cases and glitches
 
@@ -41,6 +41,7 @@ Originally in FetchGiphy, I had no useEffect. This meant that even if the select
 I found the GIPHY docs super easy to use. While I ended up going with the translate endpoint because it was most similar to the prompt, I liked some of the GIPHY's that returned with the search endpoint and I liked the ability to put G rated in the search params (that's the ex-teacher in me!). There are some interesting params in the GIPHY endpoint that were fun to mess around with. Ultimately, I made the API call using axios within a react hook so I could return multiple states and use useEffect with dependencies to only trigger when params changed.
 
 ## Deploying via Github 
+I used the following instructions to deploy to github as the instructions said for this to be self contained and deployable.
 https://medium.com/mobile-web-dev/how-to-build-and-deploy-a-react-app-to-github-pages-in-less-than-5-minutes-d6c4ffd30f14
 
 ## Why fetch?

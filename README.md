@@ -1,5 +1,5 @@
 # Getting started
-You can also view this project using the URL: https://jenniferyoung02.github.io/giphy-tooltip-client/
+You can also view this project using the URL: https://jenniferyoung02.github.io/giphy-tooltip-challenge/
 
 To bring this up locally, clone the repo than 
 `npm install`

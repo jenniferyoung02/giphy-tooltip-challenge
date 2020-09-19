@@ -18,6 +18,8 @@ Uh oh! When I first started with codesandbox, I wanted to see how that environme
 
 I browsed the web looking for some quick fixes but did not find any! Turns out modern browsers do this as a security feature. I could go down a wormhole trying to fix this is an unfamiliar environment (code sandbox) or, I could spin up a create-react-app locally and put the project on Github. I choose to do the latter because I would have VSCode (my editor) available to me and I could spend more time developing and less time figuring out the code sandbox environment.
 
+Towards the end of the time, when I finally deployed to Github - I had the same issue as the coding sandbox! Ah! Another google search showed me this https://stackoverflow.com/questions/42575181/unable-to-call-giphy-api and I was able to change the url to fix the issue.
+
 ## Selected Text and Tooltip Position
 
 My first puzzle to figure out was how to know the position of the highlighted code so that the tooltip could hover over the appropriate part. At first, I was thinking about wrapping each word in a div with a unique ID and then passing that ID to the tooltip. But I thought that was overpopulating the virtual DOM and didn't feel necessary. I quickly did some research and found that I can use window.getSelection() and e.target.clientX/clientY to get the selected text and furthermore get the coordinates of the selected text.
@@ -41,7 +43,7 @@ I found the GIPHY docs super easy to use. While I ended up going with the transl
 ## Deploying via Github 
 https://medium.com/mobile-web-dev/how-to-build-and-deploy-a-react-app-to-github-pages-in-less-than-5-minutes-d6c4ffd30f14
 
-## Why axios?
+## Why fetch?
 
 I did a little research on fetching data from a REST endpoint via React. It's been almost 2 years since doing that as we use Apollo GraphQL. I am not up to date on whether Axios or Fetch is better. Two reasons I decided to go with Axios - one is that it seemed a little simpler in its syntax. The other reason was that it automatically parses the response to json. Both of these things made Axios a preferred method when rapidly developing.
 

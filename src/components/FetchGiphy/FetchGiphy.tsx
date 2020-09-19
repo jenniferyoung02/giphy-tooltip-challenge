@@ -4,7 +4,8 @@ const axios = require("axios");
 
 // Woulld have liked to stor this as a secret keys
 const API_KEY = "4Z15yuylYr1bEQkpJiBb3dd4ffvUfs5v";
-const API_URL = "http://api.giphy.com/v1/gifs/translate?s=";
+// To prevent Mixed Content issue, I removed the htto
+const API_URL = "//api.giphy.com/v1/gifs/translate?s=";
 
 export const FetchGiphy = (selectedText: string, weirdnessValue: number) => {
   const [data, setData] = useState({ url: "", height: 0, width: 0 });
@@ -21,9 +22,10 @@ export const FetchGiphy = (selectedText: string, weirdnessValue: number) => {
       setIsLoading(true);
 
       try {
-        fetch(url).then(resp => resp.json()).then((result) => {
-          setData(result.data.images.fixed_height)
-        })
+        // I choose axios because it's one less step to parse to JSON
+        // and it felt more simple. For rapid development, simplicity is key.
+        const result = await axios(url);
+        setData(result.data.data.images.fixed_height);
       } catch (error) {
         setIsError(true);
       }

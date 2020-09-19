@@ -1,0 +1,36 @@
+
+.image-container {
+    border: 5px solid #3f51b5;
+    width: fit-content;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+  }
+
+
+/* The code below was adapted from http://www.cssarrowplease.com/ */
+
+.image-container:after, .image-container:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.image-container:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #3f51b5;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.image-container:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #3f51b5;
+	border-width: 20px;
+	margin-left: -20px;
+}

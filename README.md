@@ -36,6 +36,8 @@ If you selected on text and then selected on a different part of the text quickl
 
 Originally in FetchGiphy, I had no useEffect. This meant that even if the selected text had not changed, it was slamming the API with the request. I put the fetchData request in useEffect and made a dependency prop of selectedText and weirdnessValue so that it would only trigger an API call if selectedText or WeirdnessValue had changed.
 
+I had a lot of issues with the mixed content http / https. I thought at first it was code sandbox because locally things were working for me. I didn't realize until I deployed to github that I was missing a fundamental issue and needed to change the url. 
+
 ## GIPHY API Interaction
 
 I found the GIPHY docs super easy to use. While I ended up going with the translate endpoint because it was most similar to the prompt, I liked some of the GIPHY's that returned with the search endpoint and I liked the ability to put G rated in the search params (that's the ex-teacher in me!). There are some interesting params in the GIPHY endpoint that were fun to mess around with. Ultimately, I made the API call using axios within a react hook so I could return multiple states and use useEffect with dependencies to only trigger when params changed.

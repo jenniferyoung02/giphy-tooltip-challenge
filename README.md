@@ -38,6 +38,9 @@ Originally in FetchGiphy, I had no useEffect. This meant that even if the select
 
 I found the GIPHY docs super easy to use. While I ended up going with the translate endpoint because it was most similar to the prompt, I liked some of the GIPHY's that returned with the search endpoint and I liked the ability to put G rated in the search params (that's the ex-teacher in me!). There are some interesting params in the GIPHY endpoint that were fun to mess around with. Ultimately, I made the API call using axios within a react hook so I could return multiple states and use useEffect with dependencies to only trigger when params changed.
 
+## Deploying via Github 
+https://medium.com/mobile-web-dev/how-to-build-and-deploy-a-react-app-to-github-pages-in-less-than-5-minutes-d6c4ffd30f14
+
 ## Why axios?
 
 I did a little research on fetching data from a REST endpoint via React. It's been almost 2 years since doing that as we use Apollo GraphQL. I am not up to date on whether Axios or Fetch is better. Two reasons I decided to go with Axios - one is that it seemed a little simpler in its syntax. The other reason was that it automatically parses the response to json. Both of these things made Axios a preferred method when rapidly developing.
